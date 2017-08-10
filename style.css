@@ -1,0 +1,73 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 0px;
+}
+
+body {
+	text-align: center;
+	padding: 20px;
+	background-color: #c2c2c2;
+}
+
+.metalCase {
+	z-index: 100;
+	display: inline-block;
+	background-color: #333333;
+	background-image: linear-gradient(to top, #333333 0%, #555555 50%, #333333 100%);
+	background-image: -webkit-linear-gradient(top, #333333 0%, #555555 50%, #333333 100%);
+	width: 210px;
+	height: 410px;
+	border-radius: 20px;
+	border: 5px solid #444444;
+}
+
+.halfCase {
+	background-color: transparent;
+	width: 180px;
+	height: 180px;
+	margin: 10px;
+	border-radius: 10px;
+	border: 5px solid #444444; 
+}
+
+.screen {
+	background-color: #222222;
+	background-image: radial-gradient(#444444, #222222);
+	background-image: -webkit-radial-gradient(center, #444444, #222222);
+	width: 160px;
+	height: 160px;
+	margin: 5px;
+	border-radius: 85px;
+	border: 5px solid #444444;
+	vertical-align: middle;
+}
+
+table {
+	display: inline-block;
+	border-collapse: collapse;
+	margin-top: 19%;
+}
+
+td {
+	background-color: #666666;
+	background-image: radial-gradient(#444444, #222222);
+	background-image: -webkit-radial-gradient(center, #444444, #222222);
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	margin: 1px;
+}
+
+td.redLight {
+	background-color: red;
+	background-image: radial-gradient(red, pink);
+	background-image: -webkit-radial-gradient(center, red, pink);
+}
+
+td.greenLight {
+	background-color: lawngreen;
+	background-image: radial-gradient(lawngreen, lightgreen);
+	background-image: -webkit-radial-gradient(lawngreen, lightgreen);
+}
