@@ -1,6 +1,6 @@
 //Очистка экрана (перед сменой символа,вспомогательная функция)
 function clearScreen(nameVarTD){
-	for (var i = 0; i < nameVarTD.length; i++) {
+	for (var i = 0, arrLen = nameVarTD.length; i < arrLen; i++) {
 		nameVarTD[i].className = "";
 	};
 };
@@ -8,389 +8,213 @@ function clearScreen(nameVarTD){
 function numberZero(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[19].className = colorStyle;
-	screenLEDTD[21].className = colorStyle;
-	screenLEDTD[26].className = colorStyle;
-	screenLEDTD[28].className = colorStyle;
-	screenLEDTD[33].className = colorStyle;
-	screenLEDTD[35].className = colorStyle;
-	screenLEDTD[40].className = colorStyle;
-	screenLEDTD[42].className = colorStyle;
-	screenLEDTD[47].className = colorStyle;
-	screenLEDTD[49].className = colorStyle;
-	screenLEDTD[54].className = colorStyle;
-	screenLEDTD[56].className = colorStyle;
-	screenLEDTD[61].className = colorStyle;
-	screenLEDTD[63].className = colorStyle;
-	screenLEDTD[68].className = colorStyle;
-	screenLEDTD[70].className = colorStyle;
-	screenLEDTD[75].className = colorStyle;
-	screenLEDTD[77].className = colorStyle;
-	screenLEDTD[82].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (1,5), screenLEDTD[7], screenLEDTD[12], screenLEDTD[14],
+		screenLEDTD[19], screenLEDTD[21], screenLEDTD[26], screenLEDTD[28],
+		screenLEDTD[33], screenLEDTD[35], screenLEDTD[40], screenLEDTD[42],
+		screenLEDTD[47], screenLEDTD[49], screenLEDTD[54], screenLEDTD[56],
+		screenLEDTD[61], screenLEDTD[63], screenLEDTD[68], screenLEDTD[70],
+		screenLEDTD[75], screenLEDTD[77], screenLEDTD[82], screenLEDTD.slice (85,89)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberOne(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[9].className = colorStyle;
-	screenLEDTD[10].className = colorStyle;
-	screenLEDTD[15].className = colorStyle;
-	screenLEDTD[17].className = colorStyle;
-	screenLEDTD[24].className = colorStyle;
-	screenLEDTD[31].className = colorStyle;
-	screenLEDTD[38].className = colorStyle;
-	screenLEDTD[45].className = colorStyle;
-	screenLEDTD[52].className = colorStyle;
-	screenLEDTD[59].className = colorStyle;
-	screenLEDTD[66].className = colorStyle;
-	screenLEDTD[73].className = colorStyle;
-	screenLEDTD[80].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
-	screenLEDTD[89].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD[3], screenLEDTD[9], screenLEDTD[10], screenLEDTD[15],
+		screenLEDTD[17], screenLEDTD[24], screenLEDTD[31], screenLEDTD[38],
+		screenLEDTD[45], screenLEDTD[52], screenLEDTD[59], screenLEDTD[66],
+		screenLEDTD[73], screenLEDTD[80], screenLEDTD.slice (85,90)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberTwo(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[19].className = colorStyle;
-	screenLEDTD[26].className = colorStyle;
-	screenLEDTD[33].className = colorStyle;
-	screenLEDTD[40].className = colorStyle;
-	screenLEDTD[46].className = colorStyle;
-	screenLEDTD[52].className = colorStyle;
-	screenLEDTD[58].className = colorStyle;
-	screenLEDTD[64].className = colorStyle;
-	screenLEDTD[70].className = colorStyle;
-	screenLEDTD[77].className = colorStyle;
-	screenLEDTD[84].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
-	screenLEDTD[89].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (1,5), screenLEDTD[7], screenLEDTD[12], screenLEDTD[14],
+		screenLEDTD[19], screenLEDTD[26], screenLEDTD[33], screenLEDTD[40],
+		screenLEDTD[46], screenLEDTD[52], screenLEDTD[58], screenLEDTD[64],
+		screenLEDTD[70], screenLEDTD[77], screenLEDTD.slice (84,90)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberThree(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[19].className = colorStyle;
-	screenLEDTD[26].className = colorStyle;
-	screenLEDTD[33].className = colorStyle;
-	screenLEDTD[40].className = colorStyle;
-	screenLEDTD[44].className = colorStyle;
-	screenLEDTD[45].className = colorStyle;
-	screenLEDTD[46].className = colorStyle;
-	screenLEDTD[54].className = colorStyle;
-	screenLEDTD[61].className = colorStyle;
-	screenLEDTD[68].className = colorStyle;
-	screenLEDTD[75].className = colorStyle;
-	screenLEDTD[77].className = colorStyle;
-	screenLEDTD[82].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (1,5), screenLEDTD[7], screenLEDTD[12], screenLEDTD[19],
+		screenLEDTD[26], screenLEDTD[33], screenLEDTD[40], screenLEDTD.slice (44,47),
+		screenLEDTD[54], screenLEDTD[61], screenLEDTD[68], screenLEDTD[75],
+		screenLEDTD[77], screenLEDTD[82], screenLEDTD.slice (85,89)
+	)
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberFour(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[0].className = colorStyle;
-	screenLEDTD[5].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[19].className = colorStyle;
-	screenLEDTD[21].className = colorStyle;
-	screenLEDTD[26].className = colorStyle;
-	screenLEDTD[28].className = colorStyle;
-	screenLEDTD[33].className = colorStyle;
-	screenLEDTD[35].className = colorStyle;
-	screenLEDTD[40].className = colorStyle;
-	screenLEDTD[43].className = colorStyle;
-	screenLEDTD[44].className = colorStyle;
-	screenLEDTD[45].className = colorStyle;
-	screenLEDTD[46].className = colorStyle;
-	screenLEDTD[47].className = colorStyle;
-	screenLEDTD[54].className = colorStyle;
-	screenLEDTD[61].className = colorStyle;
-	screenLEDTD[68].className = colorStyle;
-	screenLEDTD[75].className = colorStyle;
-	screenLEDTD[82].className = colorStyle;
-	screenLEDTD[89].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD[0], screenLEDTD[5], screenLEDTD[7], screenLEDTD[12],
+		screenLEDTD[14], screenLEDTD[19], screenLEDTD[21], screenLEDTD[26],
+		screenLEDTD[28], screenLEDTD[33], screenLEDTD[35], screenLEDTD[40],
+		screenLEDTD.slice (43,48), screenLEDTD[54], screenLEDTD[61], screenLEDTD[68],
+		screenLEDTD[75], screenLEDTD[82], screenLEDTD[89]
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberFive(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[0].className = colorStyle;
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[5].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[21].className = colorStyle;
-	screenLEDTD[28].className = colorStyle;
-	screenLEDTD[36].className = colorStyle;
-	screenLEDTD[37].className = colorStyle;
-	screenLEDTD[38].className = colorStyle;
-	screenLEDTD[39].className = colorStyle;
-	screenLEDTD[47].className = colorStyle;
-	screenLEDTD[54].className = colorStyle;
-	screenLEDTD[61].className = colorStyle;
-	screenLEDTD[68].className = colorStyle;
-	screenLEDTD[75].className = colorStyle;
-	screenLEDTD[77].className = colorStyle;
-	screenLEDTD[82].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (0,6), screenLEDTD[7], screenLEDTD[14], screenLEDTD[21],
+		screenLEDTD[28], screenLEDTD.slice (36,40), screenLEDTD[47], screenLEDTD[54],
+		screenLEDTD[61], screenLEDTD[68], screenLEDTD[75], screenLEDTD[77],
+		screenLEDTD[82], screenLEDTD.slice (85,89)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberSix(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[21].className = colorStyle;
-	screenLEDTD[28].className = colorStyle;
-	screenLEDTD[35].className = colorStyle;
-	screenLEDTD[36].className = colorStyle;
-	screenLEDTD[37].className = colorStyle;
-	screenLEDTD[38].className = colorStyle;
-	screenLEDTD[39].className = colorStyle;
-	screenLEDTD[42].className = colorStyle;
-	screenLEDTD[47].className = colorStyle;
-	screenLEDTD[49].className = colorStyle;
-	screenLEDTD[54].className = colorStyle;
-	screenLEDTD[56].className = colorStyle;
-	screenLEDTD[61].className = colorStyle;
-	screenLEDTD[63].className = colorStyle;
-	screenLEDTD[68].className = colorStyle;
-	screenLEDTD[70].className = colorStyle;
-	screenLEDTD[75].className = colorStyle;
-	screenLEDTD[77].className = colorStyle;
-	screenLEDTD[82].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (1,5), screenLEDTD[7], screenLEDTD[12], screenLEDTD[14],
+		screenLEDTD[21], screenLEDTD[28], screenLEDTD.slice (35,40), screenLEDTD[42],
+		screenLEDTD[47], screenLEDTD[49], screenLEDTD[54], screenLEDTD[56],
+		screenLEDTD[61], screenLEDTD[63], screenLEDTD[68], screenLEDTD[70],
+		screenLEDTD[75], screenLEDTD[77], screenLEDTD[82], screenLEDTD.slice (85,89)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberSeven(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[0].className = colorStyle;
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[5].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[19].className = colorStyle;
-	screenLEDTD[26].className = colorStyle;
-	screenLEDTD[33].className = colorStyle;
-	screenLEDTD[39].className = colorStyle;
-	screenLEDTD[46].className = colorStyle;
-	screenLEDTD[52].className = colorStyle;
-	screenLEDTD[59].className = colorStyle;
-	screenLEDTD[65].className = colorStyle;
-	screenLEDTD[72].className = colorStyle;
-	screenLEDTD[79].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (0,6), screenLEDTD[7], screenLEDTD[12], screenLEDTD[14],
+		screenLEDTD[19], screenLEDTD[26], screenLEDTD[33], screenLEDTD[39],
+		screenLEDTD[46], screenLEDTD[52], screenLEDTD[59], screenLEDTD[65],
+		screenLEDTD[72], screenLEDTD[79], screenLEDTD[86]
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberEight(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[19].className = colorStyle;
-	screenLEDTD[21].className = colorStyle;
-	screenLEDTD[26].className = colorStyle;
-	screenLEDTD[28].className = colorStyle;
-	screenLEDTD[33].className = colorStyle;
-	screenLEDTD[35].className = colorStyle;
-	screenLEDTD[40].className = colorStyle;
-	screenLEDTD[43].className = colorStyle;
-	screenLEDTD[44].className = colorStyle;
-	screenLEDTD[45].className = colorStyle;
-	screenLEDTD[46].className = colorStyle;
-	screenLEDTD[49].className = colorStyle;
-	screenLEDTD[54].className = colorStyle;
-	screenLEDTD[56].className = colorStyle;
-	screenLEDTD[61].className = colorStyle;
-	screenLEDTD[63].className = colorStyle;
-	screenLEDTD[68].className = colorStyle;
-	screenLEDTD[70].className = colorStyle;
-	screenLEDTD[75].className = colorStyle;
-	screenLEDTD[77].className = colorStyle;
-	screenLEDTD[82].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (1,5), screenLEDTD[7], screenLEDTD[12], screenLEDTD[14],
+		screenLEDTD[19], screenLEDTD[21], screenLEDTD[26], screenLEDTD[28],
+		screenLEDTD[33], screenLEDTD[35], screenLEDTD[40], screenLEDTD.slice (43,47),
+		screenLEDTD[49], screenLEDTD[54], screenLEDTD[56], screenLEDTD[61],
+		screenLEDTD[63], screenLEDTD[68], screenLEDTD[70], screenLEDTD[75],
+		screenLEDTD[77], screenLEDTD[82], screenLEDTD.slice (85,89)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 function numberNine(colorStyle,idLED) {
 	var screenLED = document.getElementById (idLED);
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[1].className = colorStyle;
-	screenLEDTD[2].className = colorStyle;
-	screenLEDTD[3].className = colorStyle;
-	screenLEDTD[4].className = colorStyle;
-	screenLEDTD[7].className = colorStyle;
-	screenLEDTD[12].className = colorStyle;
-	screenLEDTD[14].className = colorStyle;
-	screenLEDTD[19].className = colorStyle;
-	screenLEDTD[21].className = colorStyle;
-	screenLEDTD[26].className = colorStyle;
-	screenLEDTD[28].className = colorStyle;
-	screenLEDTD[33].className = colorStyle;
-	screenLEDTD[35].className = colorStyle;
-	screenLEDTD[40].className = colorStyle;
-	screenLEDTD[42].className = colorStyle;
-	screenLEDTD[47].className = colorStyle;
-	screenLEDTD[50].className = colorStyle;
-	screenLEDTD[51].className = colorStyle;
-	screenLEDTD[52].className = colorStyle;
-	screenLEDTD[53].className = colorStyle;
-	screenLEDTD[54].className = colorStyle;
-	screenLEDTD[61].className = colorStyle;
-	screenLEDTD[68].className = colorStyle;
-	screenLEDTD[75].className = colorStyle;
-	screenLEDTD[77].className = colorStyle;
-	screenLEDTD[82].className = colorStyle;
-	screenLEDTD[85].className = colorStyle;
-	screenLEDTD[86].className = colorStyle;
-	screenLEDTD[87].className = colorStyle;
-	screenLEDTD[88].className = colorStyle;
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD.slice (1,5), screenLEDTD[7], screenLEDTD[12], screenLEDTD[14],
+		screenLEDTD[19], screenLEDTD[21], screenLEDTD[26], screenLEDTD[28],
+		screenLEDTD[33], screenLEDTD[35], screenLEDTD[40], screenLEDTD[42],
+		screenLEDTD[47], screenLEDTD.slice (50,55), screenLEDTD[61], screenLEDTD[68],
+		screenLEDTD[75], screenLEDTD[77], screenLEDTD[82], screenLEDTD.slice (85,89)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = colorStyle;
+	};
 };
 //Отображения пиктограмм
+//Пиктограмма "стой"
 function stand() {
 	var screenLED = document.getElementById ("topLED");
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[6].className = "redLight";
-	screenLEDTD[13].className = "redLight";
-	screenLEDTD[26].className = "redLight";
-	screenLEDTD[27].className = "redLight";
-	screenLEDTD[32].className = "redLight";
-	screenLEDTD[34].className = "redLight";
-	screenLEDTD[39].className = "redLight";
-	screenLEDTD[41].className = "redLight";
-	screenLEDTD[46].className = "redLight";
-	screenLEDTD[48].className = "redLight";
-	screenLEDTD[53].className = "redLight";
-	screenLEDTD[55].className = "redLight";
-	screenLEDTD[62].className = "redLight";
-	screenLEDTD[69].className = "redLight";
-	screenLEDTD[76].className = "redLight";
-	screenLEDTD[83].className = "redLight";
-	screenLEDTD[89].className = "redLight";
-	screenLEDTD[90].className = "redLight";
-	screenLEDTD[91].className = "redLight";
-	screenLEDTD[98].className = "redLight";
-	screenLEDTD[112].className = "redLight";
-	screenLEDTD[113].className = "redLight";
-	screenLEDTD[119].className = "redLight";
-	screenLEDTD[121].className = "redLight";
-	screenLEDTD[126].className = "redLight";
-	screenLEDTD[128].className = "redLight";
-	screenLEDTD[133].className = "redLight";
-	screenLEDTD[135].className = "redLight";
-	screenLEDTD[140].className = "redLight";
-	screenLEDTD[142].className = "redLight";
-	screenLEDTD[147].className = "redLight";
-	screenLEDTD[154].className = "redLight";
-	screenLEDTD[161].className = "redLight";
-	screenLEDTD[168].className = "redLight";
-	screenLEDTD[175].className = "redLight";
-	screenLEDTD[176].className = "redLight"; 
-};//Пиктограмма "стой"
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD[6], screenLEDTD[13], screenLEDTD.slice (26,28), screenLEDTD[32],
+		screenLEDTD[34], screenLEDTD[39], screenLEDTD[41], screenLEDTD[46],
+		screenLEDTD[48], screenLEDTD[53], screenLEDTD[55], screenLEDTD[62],
+		screenLEDTD[69], screenLEDTD[76], screenLEDTD[83], screenLEDTD.slice (89,92),
+		screenLEDTD[98], screenLEDTD.slice (112,114), screenLEDTD[119], screenLEDTD[121],
+		screenLEDTD[126], screenLEDTD[128], screenLEDTD[133], screenLEDTD[135],
+		screenLEDTD[140], screenLEDTD[142], screenLEDTD[147], screenLEDTD[154],
+		screenLEDTD[161], screenLEDTD[168], screenLEDTD.slice (175,177)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = "redLight";
+	};
+};
+//Пиктограмма "иди"
 function move(){
 	var screenLED = document.getElementById ("bottomLED");
 	var screenLEDTD = screenLED.getElementsByTagName('td');
+	screenLEDTD = Array.from (screenLEDTD);
 	clearScreen(screenLEDTD);
-	screenLEDTD[6].className = "greenLight";
-	screenLEDTD[13].className = "greenLight";
-	screenLEDTD[26].className = "greenLight";
-	screenLEDTD[27].className = "greenLight";
-	screenLEDTD[30].className = "greenLight";
-	screenLEDTD[32].className = "greenLight";
-	screenLEDTD[34].className = "greenLight";
-	screenLEDTD[38].className = "greenLight";
-	screenLEDTD[41].className = "greenLight";
-	screenLEDTD[48].className = "greenLight";
-	screenLEDTD[55].className = "greenLight";
-	screenLEDTD[61].className = "greenLight";
-	screenLEDTD[68].className = "greenLight";
-	screenLEDTD[74].className = "greenLight";
-	screenLEDTD[81].className = "greenLight";
-	screenLEDTD[87].className = "greenLight";
-	screenLEDTD[88].className = "greenLight";
-	screenLEDTD[91].className = "greenLight";
-	screenLEDTD[98].className = "greenLight";
-	screenLEDTD[112].className = "greenLight";
-	screenLEDTD[113].className = "greenLight";
-	screenLEDTD[119].className = "greenLight";
-	screenLEDTD[121].className = "greenLight";
-	screenLEDTD[126].className = "greenLight";
-	screenLEDTD[129].className = "greenLight";
-	screenLEDTD[133].className = "greenLight";
-	screenLEDTD[136].className = "greenLight";
-	screenLEDTD[140].className = "greenLight";
-	screenLEDTD[148].className = "greenLight";
-	screenLEDTD[155].className = "greenLight";
-	screenLEDTD[163].className = "greenLight";
-	screenLEDTD[170].className = "greenLight";
-	screenLEDTD[176].className = "greenLight";
-	screenLEDTD[177].className = "greenLight";
-};//Пиктограмма "иди"
+	var cutScreenLEDTD = [];
+	cutScreenLEDTD = cutScreenLEDTD.concat (
+		screenLEDTD[6], screenLEDTD[13], screenLEDTD.slice (26,28), screenLEDTD[30],//
+		screenLEDTD[32], screenLEDTD[34], screenLEDTD[38], screenLEDTD[41],//
+		screenLEDTD[48], screenLEDTD[55], screenLEDTD[61], screenLEDTD[68],//
+		screenLEDTD[74], screenLEDTD[81], screenLEDTD.slice (87,89), screenLEDTD[91],//
+		screenLEDTD[98], screenLEDTD.slice (112,114), screenLEDTD[119], screenLEDTD[121],//
+		screenLEDTD[126], screenLEDTD[129], screenLEDTD[133], screenLEDTD[136],//
+		screenLEDTD[140], screenLEDTD[148], screenLEDTD[155], screenLEDTD[163],//
+		screenLEDTD[170], screenLEDTD.slice (176,178)
+	);
+	for (var i = 0, arrLen = cutScreenLEDTD.length; i < arrLen; i++) {
+		cutScreenLEDTD[i].className = "greenLight";
+	};
+};
 //Режим "Выключено"(на случай добавления новых возможностей)
 function modeOff() {
 	var screenLEDTD = document.getElementsByTagName('td');
