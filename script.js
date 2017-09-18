@@ -1,3 +1,78 @@
+/*----------------------------Создание элементов на странице----------------------------*/
+
+function createElemAfterID (afterID,tagName,id,className,content){
+	var newElem = document.createElement(tagName);
+	if (afterID){
+		var afterIDElem = document.getElementById(afterID);
+		afterIDElem.appendChild(newElem);
+	}
+	if (id){
+		newElem.id = id;
+	}
+	if (className){
+		newElem.className = className;
+	}
+	if (content){
+		var textNode = document.createTextNode(content);
+		newElem.appendChild(textNode);
+	}
+}
+
+function createElemsAfterTags (afterTag,tagName,id,className,content){
+	if (afterTag){
+		var afterTagElem = document.getElementsByTagName(afterTag);
+		for (var i=0; i<afterTagElem.length; i++) {
+			var newElem = document.createElement(tagName);
+			afterTagElem[i].appendChild(newElem);
+			if (id){
+				newElem.id = id;
+			}
+			if (className){
+				newElem.className = className;
+			}
+			if (content){
+				var textNode = document.createTextNode(content);
+				newElem.appendChild(textNode);
+			}
+		}
+	}
+}
+
+function createElemAfterClass (afterClass,NumbElOfCl,tagName,id,className,content){
+	if (afterClass){
+		var afterClassElem = document.getElementsByClassName(afterClass);
+		var newElem = document.createElement(tagName);
+		afterClassElem[NumbElOfCl].appendChild(newElem);
+		if (id){
+			newElem.id = id;
+		}
+		if (className){
+			newElem.className = className;
+		}
+		if (content){
+			var textNode = document.createTextNode(content);
+			newElem.appendChild(textNode);
+		}
+	}
+}
+
+createElemAfterID("trafficLight","div","","halfCase");
+createElemAfterID("trafficLight","div","","halfCase");
+createElemAfterClass("halfCase",0,"div","topLED","screen");
+createElemAfterClass("halfCase",1,"div","bottomLED","screen");
+createElemAfterClass("screen",0,"table","topLeftLED");
+createElemAfterClass("screen",0,"table","topRightLED");
+createElemAfterClass("screen",1,"table","bottomLeftLED");
+createElemAfterClass("screen",1,"table","bottomRightLED");
+for (i=0; i<13; i++){
+	createElemsAfterTags("table","tr",);
+}
+for (i=0; i<7; i++){
+	createElemsAfterTags("tr","td",);
+}
+
+/*----------------------------Работа Светофора----------------------------*/
+
 //Очистка экрана (перед сменой символа,вспомогательная функция)
 function clearScreen(nameVarTD){
 	for (var i = 0, arrLen = nameVarTD.length; i < arrLen; i++) {
@@ -258,12 +333,10 @@ function redLight(){
 	switchNumTenSecInt("redLight","bottomLeftLED");
 	setTimeout(stand, 1000);
 };
-/*--------------------------РАБОТА СВЕТОФОРА*--------------------------*/
+/*--------------------------РАБОТА СВЕТОФОРА--------------------------*/
 greenLight();
 setTimeout(redLight, 20000);
 setInterval(function(){
 	greenLight();
 	setTimeout(redLight, 20000);
 }, 40000);
-
-
