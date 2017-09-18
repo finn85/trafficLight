@@ -10,7 +10,7 @@ body {
 	background-color: #c2c2c2;
 }
 
-.metalCase {
+#trafficLight {
 	z-index: 100;
 	display: inline-block;
 	background-color: #333333;
